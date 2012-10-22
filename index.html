@@ -20,8 +20,8 @@
   <body>
       <div id="header">
         <nav>
-          <li class="fork"><a href="https://github.com/nikicat/sbdownload">View On GitHub</a></li>
-          <li class="downloads"><a href="https://raw.github.com/nikicat/sbdownload/master/sbdownload.sh">sbapi.sh</a></li>
+          <li class="fork"><a href="https://github.com/nikicat/sbapi.sh">View On GitHub</a></li>
+          <li class="downloads"><a href="https://raw.github.com/nikicat/sbapi.sh/master/sbapi.sh">sbapi.sh</a></li>
           <li class="title">DOWNLOADS</li>
         </nav>
       </div><!-- end header -->
@@ -41,14 +41,14 @@
 <a href="https://developers.google.com/safe-browsing/developers_guide_v2">SafeBrowsing API</a> implementation comparison</h3>
 
 <p>Chrome and Firefox checks every page with malware and phishing blacklists. From the beginning there was only one provider for such lists - Google. About a year ago Yandex have started to provide similar service with compatible API.
-Here is <a href="https://github.com/nikicat/sbdownload/blob/master/sbdownload.sh">the sbdownload.sh script</a> that downloads all the chunks for malware blacklist and outputs some useful info:</p>
+Here is <a href="https://github.com/nikicat/sbapi.sh/blob/master/sbapi.sh">the sbapi.sh script</a> that downloads all the chunks for malware blacklist and outputs some useful info:</p>
 
-<pre><code>$ ./sbdownload.sh 
+<pre><code>$ ./sbapi.sh 
 have: a:94081-95769,91521-94080,89441-91520,88801-89440,87041-88800,85441-87040,85093-85440:s:97561-99065,95361-97600,94001-95360,93441-94080,91961-93440,90561-92160,90241-90560
 chunks: 19823
 files: 73
 size: 7906554
-$ ./sbdownload.sh yandex
+$ ./sbapi.sh yandex
 have: a:13373-13452,13293-13372,13213-13292,13133-13212,13053-13132,12973-13052,12893-12972,12813-12892,12801-12812:s:11676-11715,11636-11675,11596-11635,11556-11595,11516-11555,11476-11515,11436-11475,11396-11435,11356-11395,11316-11355,11302-11315
 chunks: 1067
 files: 1067
