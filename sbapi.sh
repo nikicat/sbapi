@@ -5,9 +5,11 @@ yandexurl='sba.yandex.net/downloads'
 
 listname='goog-malware-shavar'
 
-if [ "$1" = 'yandex' ]; then
+provider="$1"
+
+if [ "$provider" = 'yandex' ]; then
     url=$yandexurl
-elif [ "$1" = 'google' ]; then
+elif [ "$provider" = 'google' ]; then
     url=$googleurl
 else
     echo "Usage: $0 google|yandex"
@@ -77,7 +79,14 @@ $newchunks"
     have=$(gen_have "$chunks")
 done
 count=`echo "$chunks" | wc -l`
+size=`stat -c %s $listname`
 echo "have: $have"
 echo "chunks: $count"
 echo "files: $totalfiles"
-echo "size: `stat -c %s $listname`"
+echo "size: $size"
+
+if [ "$2" = '--upload' ]; then
+    apikey=$3
+    date=`date +%s`
+    curl -H 'Content-Type: application/json' --data "{timestamp: $date, size: $size, chunkCount: $count, fileCount: $totalfiles, have: \"$have\"}" https://api.mongolab.com/api/1/databases/sbapihist/collections/$provider.$listname?apiKey=$apikey
+fi
