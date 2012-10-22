@@ -7,8 +7,12 @@ listname='goog-malware-shavar'
 
 if [ "$1" = 'yandex' ]; then
     url=$yandexurl
-else
+elif [ "$1" = 'google' ]; then
     url=$googleurl
+else
+    echo "Usage: $0 google|yandex"
+    echo "be patient while script downloads database (several megabytes)"
+    exit 1
 fi
 
 function get_download() {
