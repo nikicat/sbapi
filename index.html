@@ -59,7 +59,7 @@ size: 1869909
 </code></pre>
 
 <p>As you can see, Google consolidates chunks so you finally need to download only 73 files for ~8MB database and Yandex provides each chunk in a separate file so there are 1067 files for &lt;2MB database.
-Also, Google have way more chunks than Yandex, possibly because Yandex resets the whole database sometimes. Historical data since 2012-10-22, chunks count:</p>
+Also, Google have way more chunks than Yandex, possibly because Yandex resets the whole database sometimes. Historical data since 2012-10-22, chunk count:</p>
 
 <style>
 #chart_container {
@@ -131,7 +131,6 @@ Also, Google have way more chunks than Yandex, possibly because Yandex resets th
                 width: 540,
                 height: 240,
                 min: 0,
-                //max: 10*1024*1024,
                 renderer: 'line',
                 series: providers
             } );
