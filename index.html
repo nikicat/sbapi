@@ -43,10 +43,10 @@
         <h3>
 <a href="https://developers.google.com/safe-browsing/developers_guide_v2">SafeBrowsing API</a> implementations comparison</h3>
 
-<p>Chrome and Firefox checks every page with malware and phishing blacklists. From the beginning there was only one provider for such lists - Google. About a year ago Yandex have started to provide similar service with compatible API.
-Here is <a href="https://github.com/nikicat/sbapi/blob/master/sbapi.sh">sbapi.sh script</a> that downloads all the chunks for malware blacklist and outputs some useful info:</p>
+<p>Chrome and Firefox checks every page with malware and phishing blacklists. From the beginning there was only one provider for such lists - Google. About a year ago <a href="http://api.yandex.com/safebrowsing/">Yandex have started to provide Safebrowsing-compatible API</a>.
+Here is <a href="https://github.com/nikicat/sbapi/blob/master/sbapi.sh">sbapi.sh script</a>. It downloads all the chunks for malware blacklist and outputs some useful info:</p>
 
-<pre><code>$ ./sbapi.sh 
+<pre><code>$ ./sbapi.sh google
 have: a:94081-95769,91521-94080,89441-91520,88801-89440,87041-88800,85441-87040,85093-85440:s:97561-99065,95361-97600,94001-95360,93441-94080,91961-93440,90561-92160,90241-90560
 chunks: 19823
 files: 73
