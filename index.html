@@ -86,6 +86,7 @@ Also, Google have way more chunks than Yandex, possibly because Yandex resets th
 
 <div id="chart_container">
 <div class='y_axis' id="y_axis"></div>
+<div class='x_axis' id="x_axis"></div>
 <div class='chart' id="chart"></div>
 <div class='legend' id="legend"></div>
 </div>
@@ -130,12 +131,12 @@ Also, Google have way more chunks than Yandex, possibly because Yandex resets th
                 element: document.querySelector("#chart"),
                 width: 540,
                 height: 240,
-                min: 0,
                 renderer: 'line',
                 series: providers
             } );
             var x_axis = new Rickshaw.Graph.Axis.Time({
-                graph: graph
+                graph: graph,
+                element: document.getElementById('x_axis'),
             });
             var y_axis = new Rickshaw.Graph.Axis.Y( {
                 graph: graph,
@@ -154,7 +155,7 @@ Also, Google have way more chunks than Yandex, possibly because Yandex resets th
     } } );
 </script>
 
-
+<p>Data is fully available through REST api, do not corrupt it please.</p>
 <p>Feel free to <a href="https://github.com/nikicat/sbapi/edit/gh-pages/index.html">fix this page</a>.</p>
       <a href="https://twitter.com/share" class="twitter-share-button" data-via="nbryskin" data-hashtags="sbapi">Tweet</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
